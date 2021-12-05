@@ -1,8 +1,8 @@
 const Koa = require('koa')
 const app = new Koa()
-const router = require('./router/router')
-const koaBody = require('./utils/koaBody')
-
+const router = require('./router')
+const { koaBody, cors } = require('./middlewares')
+app.use(cors)
 app.use(koaBody)
 app.use(router.routes())
 app.listen(5000)

@@ -1,8 +1,8 @@
-const fs = require('fs')
 const path = require('path')
+const fs = require('fs')
 module.exports = async (ctx)=>{
     const img = ctx.query.img
-    const imgPath = path.join(process.cwd(),'public/images')+ `/${img}`
+    const imgPath = path.join(__dirname,'..','public/images')+ `/${img}`
     await new Promise((resolve)=>{
         fs.unlink(imgPath,(err)=>{
             if(err) {
