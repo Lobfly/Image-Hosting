@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 .upload-box {
-    border: 2px dashed black;
+    border: 2px dashed rgb(90, 88, 88);
     height: 400px;
     width: 600px;
     display: flex;
@@ -16,9 +16,10 @@
     flex-wrap: wrap;
     background-size: cover;
     background-position: center;
+    background-clip: padding-box
 }
 .upload-box:hover {
-    border-color: skyblue;
+    border-color: #40a9ff;
 }
 .upload-box input {
     height: 100%;
@@ -28,6 +29,14 @@
     position: absolute;
 }
 .upload_infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img_infos_container {
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
